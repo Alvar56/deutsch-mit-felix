@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch mit Felix · A1 und A2</title>
+<meta name="description" content="Aprende alemán A1–A2 con Felix: gramática, vocabulario y frases para el día a día. Sin internet, sin anuncios y sin cuenta.">
+<meta name="theme-color" content="#16304f">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/icono-512.png">
+<meta property="og:title" content="Deutsch mit Felix · A1 und A2">
+<meta property="og:description" content="Learning German? A1–A2 grammar, vocabulary and everyday phrases with Felix the fox. No internet, no ads, no account.">
+<meta property="og:image" content="https://alvar56.github.io/deutsch-mit-felix/img/compartir.jpg">
+<meta property="og:type" content="website">
+<style>
+@font-face { font-family: 'Fredoka'; src: url(fonts/fredoka-700.woff2) format('woff2'); font-weight: 700; font-display: swap; }
+:root {
+  --azul: #16304f; --azul-2: #25507f; --azul-3: #3b6fa6;
+  --amarillo: #ffce00; --marca: #c2410c;
+  --fondo: #fff8ee; --tinta: #14233a; --suave: #4a5a70; --tarjeta: #ffffff; --borde: #ecdfcc;
+  --sombra: 0 10px 30px rgba(22, 48, 79, .12);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--fondo); color: var(--tinta); font: 400 17px/1.55 'Segoe UI', system-ui, -apple-system, Roboto, 'Noto Sans', 'Microsoft YaHei', 'PingFang SC', Tahoma, sans-serif; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+.envoltura { width: min(1120px, 100% - 32px); margin-inline: auto; }
+
+/* Cabecera */
+.cabecera { position: sticky; top: 0; z-index: 10; background: rgba(255, 248, 238, .92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--borde); }
+.cabecera .envoltura { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 64px; }
+.marca { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.marca img { width: 34px; height: 34px; }
+.marca-nombre { font-family: 'Fredoka', 'Segoe UI', sans-serif; font-weight: 700; font-size: 1.32rem; color: var(--marca); white-space: nowrap; direction: ltr; }
+.marca-x { white-space: nowrap; }
+.marca-cola { display: inline-block; width: .84em; height: .54em; overflow: visible; margin-left: -.17em; vertical-align: -.13em; fill: currentColor; }
+.cabecera-der { display: flex; align-items: center; gap: 10px; }
+.marca { flex: none; }
+.cabecera-der { flex: 0 1 auto; min-width: 0; }
+.idioma { min-width: 0; width: 100%; max-width: 170px; text-overflow: ellipsis; }
+@media (max-width: 360px) { .marca-nombre { font-size: 1.12rem; } .idioma { max-width: 118px; } }
+.idioma { appearance: none; border: 1px solid var(--borde); background: #fff; color: var(--tinta); border-radius: 999px; padding: 7px 30px 7px 14px; font: inherit; font-size: .9rem; cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2314233a' stroke-width='2' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; }
+[dir=rtl] .idioma { padding: 7px 14px 7px 30px; background-position: left 12px center; }
+.boton-mini { display: none; background: var(--azul); color: #fff; text-decoration: none; padding: 8px 16px; border-radius: 999px; font-weight: 600; font-size: .92rem; }
+
+/* Portada */
+.portada { background: radial-gradient(120% 90% at 20% 10%, rgba(255, 206, 0, .22), transparent 55%), linear-gradient(140deg, var(--azul) 0%, var(--azul-2) 60%, var(--azul-3) 100%); color: #fff; overflow: hidden; }
+.portada .envoltura { display: grid; gap: 28px; padding: 40px 0 0; }
+.portada-texto { text-align: center; }
+.felix { width: 128px; margin: 0 auto 6px; image-rendering: pixelated; filter: drop-shadow(0 8px 14px rgba(0, 0, 0, .25)); }
+.nivel { display: inline-block; background: var(--amarillo); color: var(--azul); font-weight: 800; border-radius: 999px; padding: 3px 14px; font-size: .9rem; letter-spacing: .02em; }
+h1 { margin: 12px 0 10px; font-size: clamp(2.3rem, 7vw, 4rem); line-height: 1.05; color: var(--amarillo); font-weight: 800; letter-spacing: -.01em; }
+.sub { margin: 0 auto 22px; max-width: 34em; color: #dbe7f5; font-size: 1.08rem; }
+.acciones { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.precio { color: #b9cce3; font-size: .9rem; margin: 2px 0 0; }
+
+.play { display: inline-flex; align-items: center; gap: 12px; background: #000; color: #fff; text-decoration: none; padding: 10px 22px 10px 16px; border-radius: 14px; border: 1px solid rgba(255, 255, 255, .35); box-shadow: 0 8px 20px rgba(0, 0, 0, .25); transition: transform .15s ease; }
+.play:hover { transform: translateY(-2px); }
+.play svg { width: 34px; height: 38px; flex: none; }
+.play span { display: flex; flex-direction: column; line-height: 1.1; text-align: start; }
+.play small { font-size: .7rem; letter-spacing: .04em; text-transform: uppercase; }
+.play b { font-size: 1.45rem; font-weight: 600; direction: ltr; unicode-bidi: isolate; }
+
+.qr { display: none; }
+.vitrina { position: relative; display: flex; justify-content: center; gap: 18px; padding-top: 6px; }
+.movil { width: 230px; border-radius: 30px; border: 8px solid #0b1626; background: #0b1626; box-shadow: 0 30px 60px rgba(0, 0, 0, .35); overflow: hidden; margin-bottom: -60px; }
+.movil img { border-radius: 22px; }
+.movil.segundo { display: none; }
+
+/* Secciones */
+section { padding: 72px 0 0; }
+.portada + section { padding-top: 96px; }
+h2 { text-align: center; font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.15; margin: 0 0 28px; color: var(--azul); }
+.ventajas { display: grid; gap: 16px; }
+.ventaja { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 20px; padding: 22px; box-shadow: var(--sombra); }
+.ventaja .icono { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 12px; }
+.ventaja .icono svg { width: 26px; height: 26px; }
+.ventaja h3 { margin: 0 0 6px; font-size: 1.15rem; }
+.ventaja p { margin: 0; color: var(--suave); }
+.t1 { background: #e3ecf8; color: #1e4b80; } .t2 { background: #e2f3e6; color: #24723a; } .t3 { background: #fbe4ec; color: #a3264f; }
+.t4 { background: #fff1c2; color: #8a5a00; } .t5 { background: #e8e4fb; color: #4b3a9e; } .t6 { background: #ffe6d2; color: #b24a0d; }
+
+.galeria { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 16px 18px; margin: 0 -16px; scrollbar-width: thin; }
+.galeria img { width: 210px; flex: none; border-radius: 22px; border: 6px solid #0b1626; background: #0b1626; scroll-snap-align: center; box-shadow: var(--sombra); }
+.escritorio { display: none; }
+
+.idiomas { text-align: center; }
+.idiomas p { color: var(--suave); max-width: 36em; margin: -12px auto 20px; }
+.chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.chips button { border: 1px solid var(--borde); background: #fff; border-radius: 999px; padding: 8px 16px; font: inherit; font-size: .98rem; cursor: pointer; color: var(--tinta); }
+.chips button[aria-pressed=true] { background: var(--azul); color: #fff; border-color: var(--azul); }
+
+.final { margin: 72px 0 0; background: linear-gradient(140deg, var(--azul), var(--azul-3)); color: #fff; text-align: center; padding: 56px 0; }
+.final h2 { color: var(--amarillo); margin-bottom: 8px; }
+.final p { color: #dbe7f5; margin: 0 0 22px; }
+.final .felix { width: 96px; }
+
+footer { padding: 26px 0 34px; text-align: center; color: var(--suave); font-size: .9rem; }
+footer a { color: var(--suave); }
+
+/* Ordenador */
+@media (min-width: 900px) {
+  .boton-mini { display: inline-block; }
+  .portada .envoltura { grid-template-columns: 1.1fr .9fr; align-items: center; padding: 48px 0 0; }
+  .portada-texto { text-align: start; padding-bottom: 64px; }
+  .felix { margin: 0 0 6px; }
+  .sub { margin-inline: 0; }
+  .acciones { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 22px; }
+  .acciones .precio { flex-basis: 100%; }
+  .qr { display: flex; align-items: center; gap: 14px; background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .22); border-radius: 18px; padding: 10px 16px 10px 10px; }
+  [dir=rtl] .qr { padding: 10px 10px 10px 16px; }
+  .qr img { width: 92px; height: 92px; border-radius: 10px; background: #fff; }
+  .qr b { display: block; font-size: .98rem; }
+  .qr small { display: block; color: #dbe7f5; font-size: .85rem; max-width: 15em; line-height: 1.35; }
+  .vitrina { align-self: end; }
+  .vitrina { max-height: 560px; }
+  .movil { width: 224px; margin-bottom: -70px; }
+  .movil.segundo { display: block; width: 196px; transform: translateY(56px); opacity: .95; }
+  .portada + section { padding-top: 120px; }
+  .ventajas { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .galeria { justify-content: center; flex-wrap: wrap; overflow: visible; margin: 0; padding: 4px 0 0; }
+  .galeria { flex-wrap: nowrap; gap: 14px; }
+  .galeria img { width: calc((100% - 70px) / 6); max-width: 180px; border-width: 5px; border-radius: 18px; }
+  .final .felix { margin: 0 auto 6px; }
+  .escritorio { display: block; margin: 34px auto 0; max-width: 900px; border-radius: 16px; border: 1px solid var(--borde); box-shadow: var(--sombra); }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .play { transition: none; } }
+</style>
+</head>
+<body>
+<header class="cabecera">
+  <div class="envoltura">
+    <a class="marca" href="#">
+      <img src="favicon.svg" alt="">
+      <span class="marca-nombre">Deutsch mit Feli<span class="marca-x">x<svg class="marca-cola" viewBox="-1 -2 42 27" aria-hidden="true"><path d="M0 13 C 8 12 16 10 24 9 C 31 8 36 5 39 0 C 40.5 8 36 15 28 19 C 18 24 8 23 0 20 Z"/></svg></span></span>
+    </a>
+    <div class="cabecera-der">
+      <label class="oculto" for="idioma" hidden data-t="lang"></label>
+      <select id="idioma" class="idioma" aria-label="Idioma / Language">
+        <option value="es">Español</option><option value="en">English</option><option value="de">Deutsch</option>
+        <option value="uk">Українська</option><option value="tr">Türkçe</option><option value="bks">Bosanski · Hrvatski · Srpski</option>
+        <option value="ar">العربية</option><option value="zh">中文</option>
+      </select>
+      <a class="boton-mini" data-play href="#" data-t="nav_get"></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="portada">
+    <div class="envoltura">
+      <div class="portada-texto">
+        <img class="felix" src="img/felix.svg" alt="Felix">
+        <span class="nivel">A1 · A2</span>
+        <h1 data-t="q"></h1>
+        <p class="sub" data-t="sub"></p>
+        <div class="acciones">
+          <a class="play" data-play href="#">
+            <svg viewBox="0 0 500 556" aria-hidden="true"><mask id="tri1"><path d="M65 75 L65 481 L435 278 Z" fill="#fff" stroke="#fff" stroke-width="110" stroke-linejoin="round"/></mask><g mask="url(#tri1)"><path d="M-20 0 L235 278 L-20 556 Z" fill="#4285f4"/><path d="M-20 0 L235 278 L545 -41 L-20 -41 Z" fill="#34a853"/><path d="M-20 556 L235 278 L545 597 L-20 597 Z" fill="#ea4335"/><path d="M235 278 L545 -41 L600 -41 L600 597 L545 597 Z" fill="#fbbc04"/></g></svg>
+            <span><small data-t="play_small"></small><b>Google Play</b></span>
+          </a>
+          <div class="qr">
+            <img src="img/qr.svg" alt="QR Google Play">
+            <span><b data-t="qr_title"></b><small data-t="qr_text"></small></span>
+          </div>
+          <p class="precio" data-t="price"></p>
+        </div>
+      </div>
+      <div class="vitrina" aria-hidden="true">
+        <div class="movil"><img src="img/capturas/movil-01-portada.webp" alt="" width="540" height="1200"></div>
+        <div class="movil segundo"><img src="img/capturas/movil-03-ejercicio.webp" alt="" width="540" height="1200"></div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="envoltura">
+      <h2 data-t="f_title"></h2>
+      <div class="ventajas">
+        <article class="ventaja"><div class="icono t1"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg></div><h3 data-t="f1t"></h3><p data-t="f1d"></p></article>
+        <article class="ventaja"><div class="icono t2"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0014.07 6H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg></div><h3 data-t="f2t"></h3><p data-t="f2d"></p></article>
+        <article class="ventaja"><div class="icono t3"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg></div><h3 data-t="f3t"></h3><p data-t="f3d"></p></article>
+        <article class="ventaja"><div class="icono t4"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></div><h3 data-t="f4t"></h3><p data-t="f4d"></p></article>
+        <article class="ventaja"><div class="icono t5"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></div><h3 data-t="f5t"></h3><p data-t="f5d"></p></article>
+        <article class="ventaja"><div class="icono t6"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg></div><h3 data-t="f6t"></h3><p data-t="f6d"></p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="envoltura">
+      <h2 data-t="s_title"></h2>
+      <div class="galeria">
+        <img src="img/capturas/movil-02-lecciones.webp" alt="" width="540" height="1200" loading="lazy">
+        <img src="img/capturas/movil-03-ejercicio.webp" alt="" width="540" height="1200" loading="lazy">
+        <img src="img/capturas/movil-04-kommunikation.webp" alt="" width="540" height="1200" loading="lazy">
+        <img src="img/capturas/movil-05-palabras.webp" alt="" width="540" height="1200" loading="lazy">
+        <img src="img/capturas/movil-07-tablas.webp" alt="" width="540" height="1200" loading="lazy">
+        <img src="img/capturas/movil-08-felix.webp" alt="" width="540" height="1200" loading="lazy">
+      </div>
+      <img class="escritorio" src="img/capturas/escritorio.webp" alt="" width="1280" height="720" loading="lazy">
+    </div>
+  </section>
+
+  <section class="idiomas">
+    <div class="envoltura">
+      <h2 data-t="l_title"></h2>
+      <p data-t="l_text"></p>
+      <div class="chips" id="chips"></div>
+    </div>
+  </section>
+
+  <div class="final">
+    <div class="envoltura">
+      <img class="felix" src="img/felix.svg" alt="">
+      <h2 data-t="cta_title"></h2>
+      <p data-t="cta_text"></p>
+      <a class="play" data-play href="#">
+        <svg viewBox="0 0 500 556" aria-hidden="true"><mask id="tri2"><path d="M65 75 L65 481 L435 278 Z" fill="#fff" stroke="#fff" stroke-width="110" stroke-linejoin="round"/></mask><g mask="url(#tri2)"><path d="M-20 0 L235 278 L-20 556 Z" fill="#4285f4"/><path d="M-20 0 L235 278 L545 -41 L-20 -41 Z" fill="#34a853"/><path d="M-20 556 L235 278 L545 597 L-20 597 Z" fill="#ea4335"/><path d="M235 278 L545 -41 L600 -41 L600 597 L545 597 Z" fill="#fbbc04"/></g></svg>
+        <span><small data-t="play_small"></small><b>Google Play</b></span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="envoltura">
+    <a href="https://sites.google.com/view/deutschmitfelix-privacidad" data-t="privacy"></a> · © 2026 Deutsch mit Felix
+  </div>
+</footer>
+
+<script>
+const T = {"es": {"lang": "Idioma", "nav_get": "Descargar", "q": "¿Aprendes alemán?", "sub": "Gramática, vocabulario y frases para el día a día, de A1 a A2, con Felix el zorro. Sin internet, sin anuncios y sin cuenta.", "play_small": "Disponible en", "price": "Un solo pago · Sin suscripción · Sin anuncios · Sin cuenta", "qr_title": "¿Estás en el ordenador?", "qr_text": "Escanea el código con el móvil y abre la app en Google Play.", "f_title": "Todo lo que necesitas para A1 y A2", "f1t": "Gramática clara", "f1d": "32 lecciones de A1.1 a A2.2, cada regla explicada en tu idioma, con ejemplos, esquemas y tablas.", "f2t": "Vocabulario con juegos", "f2d": "Tarjetas, test, emparejar, Wortsalat, ahorcado, crucigramas y el juego de der / die / das.", "f3t": "Frases para la vida real", "f3d": "Presentarte, ir al médico, buscar piso, hablar en el trabajo… con conversaciones y audio en alemán.", "f4t": "Escucha el alemán", "f4d": "Cada frase en voz alta, a la velocidad que elijas, para entrenar el oído desde el primer día.", "f5t": "Funciona sin internet", "f5d": "Todo está en tu móvil: practica en el metro, en el trabajo o de viaje. Sin cuenta y sin anuncios.", "f6t": "Felix te acompaña", "f6d": "Racha diaria, niveles, monedas y un zorro que te anima. Los fallos vuelven antes para que se te queden.", "s_title": "Así es la app", "l_title": "En tu idioma", "l_text": "Toda la app en 7 idiomas, o entera en alemán. Con el alemán de Alemania y de Austria.", "cta_title": "Empieza hoy con Felix", "cta_text": "Un poco cada día es lo que más se nota.", "privacy": "Política de privacidad"}, "en": {"lang": "Language", "nav_get": "Download", "q": "Learning German?", "sub": "Grammar, vocabulary and everyday phrases from A1 to A2, with Felix the fox. No internet, no ads, no account.", "play_small": "Get it on", "price": "One-time purchase · No subscription · No ads · No account", "qr_title": "On a computer?", "qr_text": "Scan the code with your phone to open the app on Google Play.", "f_title": "Everything you need for A1 and A2", "f1t": "Clear grammar", "f1d": "32 lessons from A1.1 to A2.2, every rule explained in your language, with examples, diagrams and tables.", "f2t": "Vocabulary with games", "f2d": "Flashcards, quizzes, matching, Wortsalat, hangman, crosswords and the der / die / das game.", "f3t": "Phrases for real life", "f3d": "Introducing yourself, seeing a doctor, finding a flat, talking at work… with dialogues and German audio.", "f4t": "Hear the German", "f4d": "Every sentence read aloud, at the speed you choose, to train your ear from day one.", "f5t": "Works offline", "f5d": "Everything is on your phone: practise on the train, at work or travelling. No account, no ads.", "f6t": "Felix keeps you going", "f6d": "Daily streaks, levels, coins and a fox who cheers you on. Mistakes come back sooner so they stick.", "s_title": "Take a look", "l_title": "In your language", "l_text": "The whole app in 7 languages, or entirely in German. With the German of Germany and Austria.", "cta_title": "Start today with Felix", "cta_text": "A little every day makes the biggest difference.", "privacy": "Privacy policy"}, "de": {"lang": "Sprache", "nav_get": "Herunterladen", "q": "Deutsch lernen?", "sub": "Grammatik, Wortschatz und Sätze für den Alltag von A1 bis A2, mit Felix, dem Fuchs. Ohne Internet, ohne Werbung, ohne Konto.", "play_small": "Jetzt bei", "price": "Einmal zahlen · Kein Abo · Keine Werbung · Kein Konto", "qr_title": "Am Computer?", "qr_text": "Scanne den Code mit dem Handy und öffne die App bei Google Play.", "f_title": "Alles, was du für A1 und A2 brauchst", "f1t": "Klare Grammatik", "f1d": "32 Lektionen von A1.1 bis A2.2, jede Regel in deiner Sprache erklärt, mit Beispielen, Schemas und Tabellen.", "f2t": "Wortschatz mit Spielen", "f2d": "Karteikarten, Tests, Zuordnen, Wortsalat, Galgenmännchen, Kreuzworträtsel und das der-/die-/das-Spiel.", "f3t": "Sätze für den Alltag", "f3d": "Sich vorstellen, zum Arzt gehen, eine Wohnung suchen, im Job sprechen … mit Dialogen und deutschem Audio.", "f4t": "Deutsch hören", "f4d": "Jeder Satz wird vorgelesen, in deinem Tempo – so trainierst du dein Ohr vom ersten Tag an.", "f5t": "Funktioniert offline", "f5d": "Alles ist auf deinem Handy: Üben in der Bahn, bei der Arbeit oder auf Reisen. Ohne Konto, ohne Werbung.", "f6t": "Felix motiviert dich", "f6d": "Tagesserie, Level, Münzen und ein Fuchs, der dich anfeuert. Fehler kommen früher wieder, damit sie sitzen.", "s_title": "So sieht die App aus", "l_title": "In deiner Sprache", "l_text": "Die ganze App in 7 Sprachen – oder komplett auf Deutsch. Mit dem Deutsch aus Deutschland und Österreich.", "cta_title": "Fang heute mit Felix an", "cta_text": "Ein bisschen jeden Tag bringt am meisten.", "privacy": "Datenschutzerklärung"}, "uk": {"lang": "Мова", "nav_get": "Завантажити", "q": "Вчиш німецьку?", "sub": "Граматика, лексика та фрази на щодень від A1 до A2 разом із лисом Felix. Без інтернету, без реклами, без акаунта.", "play_small": "Завантажте з", "price": "Одна оплата · Без підписки · Без реклами · Без акаунта", "qr_title": "За комп’ютером?", "qr_text": "Відскануй код телефоном, щоб відкрити застосунок у Google Play.", "f_title": "Усе, що потрібно для A1 і A2", "f1t": "Зрозуміла граматика", "f1d": "32 уроки від A1.1 до A2.2, кожне правило пояснено твоєю мовою, з прикладами, схемами й таблицями.", "f2t": "Лексика з іграми", "f2d": "Картки, тести, пари, Wortsalat, шибениця, кросворди та гра der / die / das.", "f3t": "Фрази для життя", "f3d": "Познайомитися, піти до лікаря, шукати житло, говорити на роботі… з діалогами та німецьким аудіо.", "f4t": "Слухай німецьку", "f4d": "Кожне речення звучить уголос із вибраною швидкістю, щоб тренувати слух із першого дня.", "f5t": "Працює без інтернету", "f5d": "Усе на твоєму телефоні: практикуйся в транспорті, на роботі чи в подорожі. Без акаунта й реклами.", "f6t": "Felix підтримує", "f6d": "Щоденна серія, рівні, монети та лис, який тебе підбадьорює. Помилки повертаються раніше, щоб запам’яталися.", "s_title": "Ось який вигляд має застосунок", "l_title": "Твоєю мовою", "l_text": "Увесь застосунок 7 мовами або повністю німецькою. З німецькою Німеччини та Австрії.", "cta_title": "Почни сьогодні з Felix", "cta_text": "Трохи щодня — і результат буде найкращим.", "privacy": "Політика конфіденційності"}, "tr": {"lang": "Dil", "nav_get": "İndir", "q": "Almanca mı öğreniyorsun?", "sub": "A1'den A2'ye dil bilgisi, kelimeler ve günlük ifadeler, tilki Felix ile. İnternetsiz, reklamsız, hesapsız.", "play_small": "Hemen indir", "price": "Tek seferlik ödeme · Abonelik yok · Reklam yok · Hesap yok", "qr_title": "Bilgisayarda mısın?", "qr_text": "Uygulamayı Google Play'de açmak için kodu telefonunla tara.", "f_title": "A1 ve A2 için ihtiyacın olan her şey", "f1t": "Anlaşılır dil bilgisi", "f1d": "A1.1'den A2.2'ye 32 ders; her kural kendi dilinde, örnekler, şemalar ve tablolarla anlatılıyor.", "f2t": "Oyunlarla kelime", "f2d": "Kartlar, testler, eşleştirme, Wortsalat, adam asmaca, bulmaca ve der / die / das oyunu.", "f3t": "Gerçek hayat için ifadeler", "f3d": "Kendini tanıtmak, doktora gitmek, ev aramak, işte konuşmak… diyaloglar ve Almanca seslerle.", "f4t": "Almancayı dinle", "f4d": "Her cümle seçtiğin hızda sesli okunur; kulağını ilk günden çalıştırırsın.", "f5t": "İnternetsiz çalışır", "f5d": "Her şey telefonunda: trende, işte ya da yolculukta çalış. Hesap yok, reklam yok.", "f6t": "Felix yanında", "f6d": "Günlük seri, seviyeler, jetonlar ve seni cesaretlendiren bir tilki. Hatalar daha erken geri gelir, böylece akılda kalır.", "s_title": "Uygulamaya göz at", "l_title": "Kendi dilinde", "l_text": "Uygulamanın tamamı 7 dilde ya da tamamen Almanca. Almanya ve Avusturya Almancasıyla.", "cta_title": "Bugün Felix ile başla", "cta_text": "Her gün biraz çalışmak en büyük farkı yaratır.", "privacy": "Gizlilik politikası"}, "bks": {"lang": "Jezik", "nav_get": "Preuzmi", "q": "Učiš njemački?", "sub": "Gramatika, riječi i fraze za svaki dan, od A1 do A2, uz lisca Felixa. Bez interneta, bez reklama, bez računa.", "play_small": "Nabavite na", "price": "Jednokratna kupovina · Bez pretplate · Bez reklama · Bez računa", "qr_title": "Na računaru si?", "qr_text": "Skeniraj kod mobitelom i otvori aplikaciju na Google Playu.", "f_title": "Sve što ti treba za A1 i A2", "f1t": "Jasna gramatika", "f1d": "32 lekcije od A1.1 do A2.2, svako pravilo objašnjeno na tvom jeziku, s primjerima, shemama i tablicama.", "f2t": "Riječi kroz igre", "f2d": "Kartice, testovi, spajanje parova, Wortsalat, vješala, križaljke i igra der / die / das.", "f3t": "Fraze za stvarni život", "f3d": "Predstaviti se, otići doktoru, tražiti stan, razgovarati na poslu… s dijalozima i njemačkim zvukom.", "f4t": "Slušaj njemački", "f4d": "Svaka rečenica pročitana naglas, brzinom koju odabereš, da vježbaš sluh od prvog dana.", "f5t": "Radi bez interneta", "f5d": "Sve je na tvom mobitelu: vježbaj u prevozu, na poslu ili na putovanju. Bez računa i bez reklama.", "f6t": "Felix te bodri", "f6d": "Dnevni niz, nivoi, novčići i lisac koji te bodri. Greške se vraćaju ranije da ih zapamtiš.", "s_title": "Pogledaj aplikaciju", "l_title": "Na tvom jeziku", "l_text": "Cijela aplikacija na 7 jezika ili potpuno na njemačkom. S njemačkim iz Njemačke i Austrije.", "cta_title": "Počni danas s Felixom", "cta_text": "Malo svaki dan donosi najviše.", "privacy": "Politika privatnosti"}, "ar": {"lang": "اللغة", "nav_get": "تنزيل", "q": "تتعلم الألمانية؟", "sub": "القواعد والمفردات وعبارات الحياة اليومية من A1 إلى A2 مع الثعلب Felix. بلا إنترنت وبلا إعلانات وبلا حساب.", "play_small": "احصل عليه من", "price": "دفعة واحدة · بلا اشتراك · بلا إعلانات · بلا حساب", "qr_title": "على الكمبيوتر؟", "qr_text": "امسح الرمز بهاتفك لفتح التطبيق على Google Play.", "f_title": "كل ما تحتاجه لمستويي A1 وA2", "f1t": "قواعد واضحة", "f1d": "32 درسًا من A1.1 إلى A2.2، كل قاعدة مشروحة بلغتك مع أمثلة ومخططات وجداول.", "f2t": "مفردات بالألعاب", "f2d": "بطاقات واختبارات ومطابقة وWortsalat والمشنقة والكلمات المتقاطعة ولعبة der / die / das.", "f3t": "عبارات للحياة الواقعية", "f3d": "التعريف بنفسك، زيارة الطبيب، البحث عن سكن، الحديث في العمل… مع حوارات وصوت ألماني.", "f4t": "استمع إلى الألمانية", "f4d": "كل جملة تُقرأ بصوت عالٍ بالسرعة التي تختارها لتدرّب أذنك من اليوم الأول.", "f5t": "يعمل بلا إنترنت", "f5d": "كل شيء على هاتفك: تدرّب في المواصلات أو في العمل أو في السفر. بلا حساب وبلا إعلانات.", "f6t": "Felix يشجّعك", "f6d": "سلسلة أيام ومستويات وعملات وثعلب يشجّعك. الأخطاء تعود أبكر لتثبت في ذهنك.", "s_title": "ألقِ نظرة على التطبيق", "l_title": "بلغتك", "l_text": "التطبيق كاملًا بسبع لغات أو بالألمانية بالكامل، مع ألمانية ألمانيا والنمسا.", "cta_title": "ابدأ اليوم مع Felix", "cta_text": "القليل كل يوم هو ما يصنع الفرق.", "privacy": "سياسة الخصوصية"}, "zh": {"lang": "语言", "nav_get": "下载", "q": "在学德语吗？", "sub": "和小狐狸 Felix 一起学习 A1 到 A2 的语法、词汇和日常用语。无需联网，没有广告，不用注册。", "play_small": "下载应用，请到", "price": "一次购买 · 无订阅 · 无广告 · 无需账号", "qr_title": "在用电脑？", "qr_text": "用手机扫码，在 Google Play 打开应用。", "f_title": "A1 和 A2 所需的一切", "f1t": "清楚的语法", "f1d": "从 A1.1 到 A2.2 共 32 课，每条规则都用你的语言讲解，配有例句、图解和表格。", "f2t": "边玩边记单词", "f2d": "单词卡、测验、配对、Wortsalat、猜词游戏、填字游戏，还有 der / die / das 小游戏。", "f3t": "真实生活用语", "f3d": "自我介绍、看医生、找房子、工作交流……配有对话和德语语音。", "f4t": "听德语", "f4d": "每个句子都能按你选择的速度朗读，从第一天开始练听力。", "f5t": "离线可用", "f5d": "一切都在手机里：在地铁上、工作时或旅行中都能练习。无需账号，没有广告。", "f6t": "Felix 陪着你", "f6d": "每日连续打卡、等级、金币，还有一只为你加油的狐狸。错题会更早再出现，帮你记牢。", "s_title": "看看应用", "l_title": "用你的语言", "l_text": "整个应用支持 7 种语言，也可以全部用德语。涵盖德国和奥地利的德语。", "cta_title": "今天就和 Felix 一起开始", "cta_text": "每天学一点，效果最明显。", "privacy": "隐私政策"}};
+const NOMBRES = { es: 'Español', en: 'English', de: 'Deutsch', uk: 'Українська', tr: 'Türkçe', bks: 'Bosanski · Hrvatski · Srpski', ar: 'العربية', zh: '中文' };
+const HL = { es: 'es', en: 'en', de: 'de', uk: 'uk', tr: 'tr', bks: 'hr', ar: 'ar', zh: 'zh-CN' };
+const HTML_LANG = { es: 'es', en: 'en', de: 'de', uk: 'uk', tr: 'tr', bks: 'hr', ar: 'ar', zh: 'zh-Hans' };
+const PLAY = 'https://play.google.com/store/apps/details?id=com.deutschmitfelix.app';
+
+function elegido() {
+  const p = new URLSearchParams(location.search).get('lang');
+  if (p && T[p]) return p;
+  try { const g = localStorage.getItem('lang'); if (g && T[g]) return g; } catch (e) {}
+  for (const l of navigator.languages || [navigator.language || 'en']) {
+    const c = String(l).toLowerCase();
+    if (/^(hr|sr|bs|sh)\b/.test(c)) return 'bks';
+    const b = c.split('-')[0];
+    if (T[b]) return b;
+  }
+  return 'en';
+}
+
+function poner(lang, guardar) {
+  const t = T[lang];
+  document.documentElement.lang = HTML_LANG[lang];
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.title = 'Deutsch mit Felix · ' + t.q;
+  document.querySelectorAll('[data-t]').forEach((el) => { if (t[el.dataset.t] != null) el.textContent = t[el.dataset.t]; });
+  document.querySelector('meta[name=description]').setAttribute('content', t.sub);
+  document.querySelectorAll('[data-play]').forEach((a) => { a.href = PLAY + '&hl=' + HL[lang]; a.rel = 'noopener'; });
+  document.getElementById('idioma').value = lang;
+  document.querySelectorAll('#chips button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+  if (guardar) {
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+    const u = new URL(location.href); u.searchParams.set('lang', lang); history.replaceState(null, '', u);
+  }
+}
+
+const chips = document.getElementById('chips');
+for (const [k, n] of Object.entries(NOMBRES)) {
+  const b = document.createElement('button');
+  b.type = 'button'; b.dataset.lang = k; b.textContent = n; b.lang = HTML_LANG[k];
+  b.addEventListener('click', () => { poner(k, true); window.scrollTo({ top: 0 }); });
+  chips.appendChild(b);
+}
+document.getElementById('idioma').addEventListener('change', (e) => poner(e.target.value, true));
+poner(elegido(), false);
+</script>
+</body>
+</html>

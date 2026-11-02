@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch mit Felix · A1 und A2</title>
+<meta name="description" content="Aprende alemán A1–A2 con Felix: gramática, vocabulario y frases para el día a día. Sin internet, sin anuncios y sin cuenta.">
+<meta name="theme-color" content="#16304f">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/icono-512.png">
+<meta property="og:title" content="Deutsch mit Felix · A1 und A2">
+<meta property="og:description" content="Learning German? A1–A2 grammar, vocabulary and everyday phrases with Felix the fox. No internet, no ads, no account.">
+<meta property="og:image" content="https://alvar56.github.io/deutsch-mit-felix/img/compartir.jpg">
+<meta property="og:type" content="website">
+<style>
+@font-face { font-family: 'Fredoka'; src: url(fonts/fredoka-700.woff2) format('woff2'); font-weight: 700; font-display: swap; }
+:root {
+  --azul: #16304f; --azul-2: #25507f; --azul-3: #3b6fa6;
+  --amarillo: #ffce00; --marca: #c2410c;
+  --fondo: #fff8ee; --tinta: #14233a; --suave: #4a5a70; --tarjeta: #ffffff; --borde: #ecdfcc;
+  --sombra: 0 10px 30px rgba(22, 48, 79, .12);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--fondo); color: var(--tinta); font: 400 17px/1.55 'Segoe UI', system-ui, -apple-system, Roboto, 'Noto Sans', 'Microsoft YaHei', 'PingFang SC', Tahoma, sans-serif; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+.envoltura { width: min(1120px, 100% - 32px); margin-inline: auto; }
+
+/* Cabecera */
+.cabecera { position: sticky; top: 0; z-index: 10; background: rgba(255, 248, 238, .92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--borde); }
+.cabecera .envoltura { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 64px; }
+.marca { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.marca img { width: 34px; height: 34px; }
+.marca-nombre { font-family: 'Fredoka', 'Segoe UI', sans-serif; font-weight: 700; font-size: 1.32rem; color: var(--marca); white-space: nowrap; direction: ltr; }
+.marca-x { white-space: nowrap; }
+.marca-cola { display: inline-block; width: .84em; height: .54em; overflow: visible; margin-left: -.17em; vertical-align: -.13em; fill: currentColor; }
+.cabecera-der { display: flex; align-items: center; gap: 10px; }
+.marca { flex: none; }
+.cabecera-der { flex: 0 1 auto; min-width: 0; }
+.idioma { min-width: 0; width: 100%; max-width: 170px; text-overflow: ellipsis; }
+@media (max-width: 360px) { .marca-nombre { font-size: 1.12rem; } .idioma { max-width: 118px; } }
+.idioma { appearance: none; border: 1px solid var(--borde); background: #fff; color: var(--tinta); border-radius: 999px; padding: 7px 30px 7px 14px; font: inherit; font-size: .9rem; cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2314233a' stroke-width='2' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; }
+[dir=rtl] .idioma { padding: 7px 14px 7px 30px; background-position: left 12px center; }
+.boton-mini { display: none; background: var(--azul); color: #fff; text-decoration: none; padding: 8px 16px; border-radius: 999px; font-weight: 600; font-size: .92rem; }
+
+/* Portada */
+.portada { background: radial-gradient(120% 90% at 20% 10%, rgba(255, 206, 0, .22), transparent 55%), linear-gradient(140deg, var(--azul) 0%, var(--azul-2) 60%, var(--azul-3) 100%); color: #fff; overflow: hidden; }
+.portada .envoltura { display: grid; gap: 28px; padding: 40px 0 0; }
+.portada-texto { text-align: center; }
+.felix { width: 128px; margin: 0 auto 6px; image-rendering: pixelated; filter: drop-shadow(0 8px 14px rgba(0, 0, 0, .25)); }
+.nivel { display: inline-block; background: var(--amarillo); color: var(--azul); font-weight: 800; border-radius: 999px; padding: 3px 14px; font-size: .9rem; letter-spacing: .02em; }
+h1 { margin: 12px 0 10px; font-size: clamp(2.3rem, 7vw, 4rem); line-height: 1.05; color: var(--amarillo); font-weight: 800; letter-spacing: -.01em; }
+.sub { margin: 0 auto 22px; max-width: 34em; color: #dbe7f5; font-size: 1.08rem; }
+.acciones { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.precio { color: #b9cce3; font-size: .9rem; margin: 2px 0 0; }
+
+.play { display: inline-flex; align-items: center; gap: 12px; background: #000; color: #fff; text-decoration: none; padding: 10px 22px 10px 16px; border-radius: 14px; border: 1px solid rgba(255, 255, 255, .35); box-shadow: 0 8px 20px rgba(0, 0, 0, .25); transition: transform .15s ease; }
+.play:hover { transform: translateY(-2px); }
+.play svg { width: 34px; height: 38px; flex: none; }
+.play span { display: flex; flex-direction: column; line-height: 1.1; text-align: start; }
+.play small { font-size: .7rem; letter-spacing: .04em; text-transform: uppercase; }
+.play b { font-size: 1.45rem; font-weight: 600; direction: ltr; unicode-bidi: isolate; }
+
+.qr { display: none; }
+.vitrina { position: relative; display: flex; justify-content: center; gap: 18px; padding-top: 6px; }
+.movil { width: 230px; border-radius: 30px; border: 8px solid #0b1626; background: #0b1626; box-shadow: 0 30px 60px rgba(0, 0, 0, .35); overflow: hidden; margin-bottom: -60px; }
+.movil img { border-radius: 22px; }
+.movil.segundo { display: none; }
+
+/* Secciones */
+section { padding: 72px 0 0; }
+.portada + section { padding-top: 96px; }
+h2 { text-align: center; font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.15; margin: 0 0 28px; color: var(--azul); }
+.ventajas { display: grid; gap: 16px; }
+.ventaja { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 20px; padding: 22px; box-shadow: var(--sombra); }
+.ventaja .icono { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 12px; }
+.ventaja .icono svg { width: 26px; height: 26px; }
+.ventaja h3 { margin: 0 0 6px; font-size: 1.15rem; }
+.ventaja p { margin: 0; color: var(--suave); }
+.t1 { background: #e3ecf8; color: #1e4b80; } .t2 { background: #e2f3e6; color: #24723a; } .t3 { background: #fbe4ec; color: #a3264f; }
+.t4 { background: #fff1c2; color: #8a5a00; } .t5 { background: #e8e4fb; color: #4b3a9e; } .t6 { background: #ffe6d2; color: #b24a0d; }
+
+.galeria { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 16px 18px; margin: 0 -16px; scrollbar-width: thin; }
+.galeria img { width: 210px; flex: none; border-radius: 22px; border: 6px solid #0b1626; background: #0b1626; scroll-snap-align: center; box-shadow: var(--sombra); }
+.escritorio { display: none; }
+
+.idiomas { text-align: center; }
+.idiomas p { color: var(--suave); max-width: 36em; margin: -12px auto 20px; }
+.chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.chips button { border: 1px solid var(--borde); background: #fff; border-radius: 999px; padding: 8px 16px; font: inherit; font-size: .98rem; cursor: pointer; color: var(--tinta); }
+.chips button[aria-pressed=true] { background: var(--azul); color: #fff; border-color: var(--azul); }
+
+.final { margin: 72px 0 0; background: linear-gradient(140deg, var(--azul), var(--azul-3)); color: #fff; text-align: center; padding: 56px 0; }
+.final h2 { color: var(--amarillo); margin-bottom: 8px; }
+.final p { color: #dbe7f5; margin: 0 0 22px; }
+.final .felix { width: 96px; }
+
+footer { padding: 26px 0 34px; text-align: center; color: var(--suave); font-size: .9rem; }
+footer a { color: var(--suave); }
+
+/* Ordenador */
+@media (min-width: 900px) {
+  .boton-mini { display: inline-block; }
+  .portada .envoltura { grid-template-columns: 1.1fr .9fr; align-items: center; padding: 48px 0 0; }
+  .portada-texto { text-align: start; padding-bottom: 64px; }
+  .felix { margin: 0 0 6px; }
+  .sub { margin-inline: 0; }
+  .acciones { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 22px; }
+  .acciones .precio { flex-basis: 100%; }
+  .qr { display: flex; align-items: center; gap: 14px; background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .22); border-radius: 18px; padding: 10px 16px 10px 10px; }
+  [dir=rtl] .qr { padding: 10px 10px 10px 16px; }
+  .qr img { width: 92px; height: 92px; border-radius: 10px; background: #fff; }
+  .qr b { display: block; font-size: .98rem; }
+  .qr small { display: block; color: #dbe7f5; font-size: .85rem; max-width: 15em; line-height: 1.35; }
+  .vitrina { align-self: end; }
+  .vitrina { max-height: 560px; }
+  .movil { width: 224px; margin-bottom: -70px; }
+  .movil.segundo { display: block; width: 196px; transform: translateY(56px); opacity: .95; }
+  .portada + section { padding-top: 120px; }
+  .ventajas { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .galeria { justify-content: center; flex-wrap: wrap; overflow: visible; margin: 0; padding: 4px 0 0; }
+  .galeria { flex-wrap: nowrap; gap: 14px; }
+  .galeria img { width: calc((100% - 70px) / 6); max-width: 180px; border-width: 5px; border-radius: 18px; }
+  .final .felix { margin: 0 auto 6px; }
+  .escritorio { display: block; margin: 34px auto 0; max-width: 900px; border-radius: 16px; border: 1px solid var(--borde); box-shadow: var(--sombra); }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .play { transition: none; } }
+</style>
+</head>
+<body>
+<header class="cabecera">
+  <div class="envoltura">
+    <a class="marca" href="#">
+      <img src="favicon.svg" alt="">
+      <span class="marca-nombre">Deutsch mit Feli<span class="marca-x">x<svg class="marca-cola" viewBox="-1 -2 42 27" aria-hidden="true"><path d="M0 13 C 8 12 16 10 24 9 C 31 8 36 5 39 0 C 40.5 8 36 15 28 19 C 18 24 8 23 0 20 Z"/></svg></span></span>
+    </a>
+    <div class="cabecera-der">
+      <label class="oculto" for="idioma" hidden data-t="lang"></label>
+      <select id="idioma" class="idioma" aria-label="Idioma / Language">
+        <option value="es">Español</option><option value="en">English</option><option value="de">Deutsch</option>
+        <option value="uk">Українська</option><option value="tr">Türkçe</option><option value="bks">Bosanski · Hrvatski · Srpski</option>
+        <option value="ar">العربية</option><option value="zh">中文</option>
+      </select>
+      <a class="boton-mini" data-play href="#" data-t="nav_get"></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="portada">
+    <div class="envoltura">
+      <div class="portada-texto">
+        <img class="felix" src="img/felix.svg" alt="Felix">
+        <span class="nivel">A1 · A2</span>
+        <h1 data-t="q"></h1>
+        <p class="sub" data-t="sub"></p>
+        <div class="acciones">
+          <a class="play" data-play href="#">
+            {{PLAY_LOGO}}
+            <span><small data-t="play_small"></small><b>Google Play</b></span>
+          </a>
+          <div class="qr">
+            <img src="img/qr.svg" alt="QR Google Play">
+            <span><b data-t="qr_title"></b><small data-t="qr_text"></small></span>
+          </div>
+          <p class="precio" data-t="price"></p>
+        </div>
+      </div>
+      <div class="vitrina" aria-hidden="true">
+        <div class="movil"><img src="img/capturas/movil-01-portada.webp" alt="" width="540" height="1200"></div>
+        <div class="movil segundo"><img src="img/capturas/movil-03-ejercicio.webp" alt="" width="540" height="1200"></div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="envoltura">
+      <h2 data-t="f_title"></h2>
+      <div class="ventajas">
+        <article class="ventaja"><div class="icono t1">{{ICON_grammar}}</div><h3 data-t="f1t"></h3><p data-t="f1d"></p></article>
+        <article class="ventaja"><div class="icono t2">{{ICON_vocab}}</div><h3 data-t="f2t"></h3><p data-t="f2d"></p></article>
+        <article class="ventaja"><div class="icono t3">{{ICON_komm}}</div><h3 data-t="f3t"></h3><p data-t="f3d"></p></article>
+        <article class="ventaja"><div class="icono t4">{{ICON_altavoz}}</div><h3 data-t="f4t"></h3><p data-t="f4d"></p></article>
+        <article class="ventaja"><div class="icono t5">{{ICON_offline}}</div><h3 data-t="f5t"></h3><p data-t="f5d"></p></article>
+        <article class="ventaja"><div class="icono t6">{{ICON_leaderboard}}</div><h3 data-t="f6t"></h3><p data-t="f6d"></p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="envoltura">
+      <h2 data-t="s_title"></h2>
+      <div class="galeria">
+        <img src="img/capturas/movil-02-lecciones.webp" alt="" width="540" height="1200" loading="lazy">
+        <img src="img/capturas/movil-03-ejercicio.webp" alt="" width="540" height="1200" loading="lazy">
+        <img src="img/capturas/movil-04-kommunikation.webp" alt="" width="540" height="1200" loading="lazy">
+        <img src="img/capturas/movil-05-palabras.webp" alt="" width="540" height="1200" loading="lazy">
+        <img src="img/capturas/movil-07-tablas.webp" alt="" width="540" height="1200" loading="lazy">
+        <img src="img/capturas/movil-08-felix.webp" alt="" width="540" height="1200" loading="lazy">
+      </div>
+      <img class="escritorio" src="img/capturas/escritorio.webp" alt="" width="1280" height="720" loading="lazy">
+    </div>
+  </section>
+
+  <section class="idiomas">
+    <div class="envoltura">
+      <h2 data-t="l_title"></h2>
+      <p data-t="l_text"></p>
+      <div class="chips" id="chips"></div>
+    </div>
+  </section>
+
+  <div class="final">
+    <div class="envoltura">
+      <img class="felix" src="img/felix.svg" alt="">
+      <h2 data-t="cta_title"></h2>
+      <p data-t="cta_text"></p>
+      <a class="play" data-play href="#">
+        {{PLAY_LOGO}}
+        <span><small data-t="play_small"></small><b>Google Play</b></span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="envoltura">
+    <a href="https://sites.google.com/view/deutschmitfelix-privacidad" data-t="privacy"></a> · © 2026 Deutsch mit Felix
+  </div>
+</footer>
+
+<script>
+const T = {{TEXTOS}};
+const NOMBRES = { es: 'Español', en: 'English', de: 'Deutsch', uk: 'Українська', tr: 'Türkçe', bks: 'Bosanski · Hrvatski · Srpski', ar: 'العربية', zh: '中文' };
+const HL = { es: 'es', en: 'en', de: 'de', uk: 'uk', tr: 'tr', bks: 'hr', ar: 'ar', zh: 'zh-CN' };
+const HTML_LANG = { es: 'es', en: 'en', de: 'de', uk: 'uk', tr: 'tr', bks: 'hr', ar: 'ar', zh: 'zh-Hans' };
+const PLAY = 'https://play.google.com/store/apps/details?id=com.deutschmitfelix.app';
+
+function elegido() {
+  const p = new URLSearchParams(location.search).get('lang');
+  if (p && T[p]) return p;
+  try { const g = localStorage.getItem('lang'); if (g && T[g]) return g; } catch (e) {}
+  for (const l of navigator.languages || [navigator.language || 'en']) {
+    const c = String(l).toLowerCase();
+    if (/^(hr|sr|bs|sh)\b/.test(c)) return 'bks';
+    const b = c.split('-')[0];
+    if (T[b]) return b;
+  }
+  return 'en';
+}
+
+function poner(lang, guardar) {
+  const t = T[lang];
+  document.documentElement.lang = HTML_LANG[lang];
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.title = 'Deutsch mit Felix · ' + t.q;
+  document.querySelectorAll('[data-t]').forEach((el) => { if (t[el.dataset.t] != null) el.textContent = t[el.dataset.t]; });
+  document.querySelector('meta[name=description]').setAttribute('content', t.sub);
+  document.querySelectorAll('[data-play]').forEach((a) => { a.href = PLAY + '&hl=' + HL[lang]; a.rel = 'noopener'; });
+  document.getElementById('idioma').value = lang;
+  document.querySelectorAll('#chips button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+  if (guardar) {
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+    const u = new URL(location.href); u.searchParams.set('lang', lang); history.replaceState(null, '', u);
+  }
+}
+
+const chips = document.getElementById('chips');
+for (const [k, n] of Object.entries(NOMBRES)) {
+  const b = document.createElement('button');
+  b.type = 'button'; b.dataset.lang = k; b.textContent = n; b.lang = HTML_LANG[k];
+  b.addEventListener('click', () => { poner(k, true); window.scrollTo({ top: 0 }); });
+  chips.appendChild(b);
+}
+document.getElementById('idioma').addEventListener('change', (e) => poner(e.target.value, true));
+poner(elegido(), false);
+</script>
+</body>
+</html>
