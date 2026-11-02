@@ -1,1 +1,0 @@
-import{s as a}from"./index-YAg_TRC0.js";const e="user_grammar_topics";function i(){const r=a.get(e,[]);return Array.isArray(r)?r:[]}function o(r){return r&&i().find(t=>t.id===r)||null}function m(r){a.update(e,[],t=>t.filter(s=>s.id!==r))}export{o as a,m as d,i as g};
