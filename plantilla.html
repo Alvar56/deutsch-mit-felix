@@ -63,6 +63,8 @@ h1 { margin: 12px 0 10px; font-size: clamp(2.3rem, 7vw, 4rem); line-height: 1.05
 .play small { font-size: .7rem; letter-spacing: .04em; text-transform: uppercase; }
 .play b { font-size: 1.45rem; font-weight: 600; direction: ltr; unicode-bidi: isolate; }
 
+.web-boton { display: inline-block; color: #fff; text-decoration: none; border: 2px solid rgba(255, 255, 255, .7); border-radius: 14px; padding: 14px 20px; font-weight: 700; transition: background .15s ease; }
+.web-boton:hover { background: rgba(255, 255, 255, .12); }
 .qr { display: none; }
 .vitrina { position: relative; display: flex; justify-content: center; gap: 18px; padding-top: 6px; }
 .movil { width: 230px; border-radius: 30px; border: 8px solid #0b1626; background: #0b1626; box-shadow: 0 30px 60px rgba(0, 0, 0, .35); overflow: hidden; margin-bottom: -60px; }
@@ -109,6 +111,7 @@ footer a { color: var(--suave); }
   .sub { margin-inline: 0; }
   .acciones { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 22px; }
   .acciones .precio { flex-basis: 100%; }
+  .final .acciones { justify-content: center; }
   .qr { display: flex; align-items: center; gap: 14px; background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .22); border-radius: 18px; padding: 10px 16px 10px 10px; }
   [dir=rtl] .qr { padding: 10px 10px 10px 16px; }
   .qr img { width: 92px; height: 92px; border-radius: 10px; background: #fff; }
@@ -165,7 +168,8 @@ footer a { color: var(--suave); }
             <img src="img/qr.svg" alt="QR Google Play">
             <span><b data-t="qr_title"></b><small data-t="qr_text"></small></span>
           </div>
-          <p class="precio" data-t="price"></p>
+          <a class="web-boton" href="jugar/" data-t="web_btn"></a>
+          <p class="precio"><span data-t="price"></span><br><span data-t="web_nota"></span></p>
         </div>
       </div>
       <div class="vitrina" aria-hidden="true">
@@ -217,10 +221,13 @@ footer a { color: var(--suave); }
       <img class="felix" src="img/felix.svg" alt="">
       <h2 data-t="cta_title"></h2>
       <p data-t="cta_text"></p>
-      <a class="play" data-play href="#">
-        {{PLAY_LOGO}}
-        <span><small data-t="play_small"></small><b>Google Play</b></span>
-      </a>
+      <div class="acciones">
+        <a class="play" data-play href="#">
+          {{PLAY_LOGO}}
+          <span><small data-t="play_small"></small><b>Google Play</b></span>
+        </a>
+        <a class="web-boton" href="jugar/" data-t="web_btn"></a>
+      </div>
     </div>
   </div>
 </main>

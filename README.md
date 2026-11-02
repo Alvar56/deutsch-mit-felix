@@ -6,3 +6,4 @@ Publicada en https://alvar56.github.io/deutsch-mit-felix/
 
 - `index.html` se genera con `python montar.py` a partir de `plantilla.html`, `textos.json` (los textos de cada idioma) e `iconos.json`.
 - El idioma sale del navegador; también `?lang=es|en|de|uk|tr|bks|ar|zh`.
+jugar/ = versión web de la app (se genera con `npm run web` en el repo del APK).

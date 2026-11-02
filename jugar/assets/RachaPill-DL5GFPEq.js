@@ -1,0 +1,1 @@
+import{j as r,t as s}from"./index-LZh4gp7n.js";function t({n:a=0}){return a<2?null:r.jsxs("span",{className:"pill racha"+(a>=5?" fuego":"")+" racha-pop",children:[a>=5?"🔥":"⚡"," ",s("ses.streakN",{n:a})]},a)}export{t as R};
