@@ -1,1 +1,0 @@
-import{j as t,ai as a}from"./index-CYE2637D.js";import{t as i}from"./aleman-5doYEvQw.js";function l({texto:s,className:r}){const n=i(s);return n.length?t.jsx(t.Fragment,{children:n.map((e,o)=>e.de?t.jsx("i",{className:"de-it"+(r?" "+r:""),children:e.texto},o):t.jsx(a.Fragment,{children:e.texto},o))}):null}export{l as T};
