@@ -1,1 +1,0 @@
-import{r}from"./index-BLPcTPBE.js";import{g as o,b as u}from"./aiJobs-BE9aFhRc.js";function f(t){const[e,s]=r.useState(()=>o(t));return r.useEffect(()=>(s(o(t)),u(t,s)),[t]),e}export{f as u};
